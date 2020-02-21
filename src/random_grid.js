@@ -8,9 +8,9 @@ export function RandomGrid() {
                   "FIPRSY", "GORRVW", "HIPRRY", "NOOTUW", "OOOTTU"];
     let chars = dice.map(cube => cube[Math.floor(Math.random() * cube.length)]);
     chars.sort(() => Math.random() - 0.5); // Shuffle the letters.
-  
-    const SIZE = 5;
+    console.log(chars);
     let grid = [];
+    const SIZE = 5;
     for (let row = 0; row < SIZE; row++) {
       grid[row] = [];
       for (let col = 0; col < SIZE; ++col) {
@@ -18,5 +18,6 @@ export function RandomGrid() {
         if (grid[row][col] === "Q") grid[row][col] = "Qu";
       }
     }
+    console.log(grid);
     return grid;
   }
